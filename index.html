@@ -3,98 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Miner</title>
+    <title>Login Coffee Miner</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #6F4F1F; /* Cor de café */
-            color: #fff;
             margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #FFD700; /* Cor dourada */
-            padding: 20px;
-            text-align: center;
-        }
-        header img {
-            max-width: 200px;
-        }
-        section {
-            margin: 20px;
-        }
-        a {
-            color: #FFD700;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #FFD700; /* Cor dourada */
+            font-family: Arial, sans-serif;
+            background-color: #6F4F1F; /* Fundo cor de café escuro */
+            color: #fff;
         }
         .sidebar {
-            width: 400px; /* Largura ajustada para 400px */
-            height: 100vh; /* Mantém altura 100% da tela */
-            background-color: #3e8e41; /* Cor escura para o lado esquerdo */
+            width: 400px;
+            height: 100vh;
+            background-color: #6F4F1F; /* Cor de café */
             padding: 20px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        .content {
-            margin-left: 400px; /* Ajusta o conteúdo para começar depois do lado esquerdo */
-            padding: 20px;
-            background-color: #FFF8DC; /* Cor clara para o lado direito */
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
         }
-        .chat-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #FFD700; /* Cor dourada do botão */
-            color: #3e8e41; /* Cor escura para o texto */
+        .logo img {
+            max-width: 150px;
+        }
+        .navigation {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .navigation a {
+            color: #FFD700; /* Cor dourada */
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .form input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #FFD700; /* Cor dourada */
+            border-radius: 5px;
+            background-color: #FFF8DC; /* Cor clara */
+            color: #6F4F1F;
+        }
+        .form button {
+            padding: 10px;
             border: none;
-            padding: 15px;
-            border-radius: 50%;
+            border-radius: 5px;
+            background-color: #FFD700; /* Cor dourada */
+            color: #6F4F1F;
+            font-weight: bold;
             cursor: pointer;
         }
-        .chat-btn:hover {
-            background-color: #6F4F1F; /* Cor de café no hover */
+        .form button:hover {
+            background-color: #3e8e41;
+            color: #fff;
+        }
+        .form .or {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        .form .forgot-password {
+            text-align: right;
+            font-size: 12px;
+        }
+        .form .forgot-password a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+        footer {
+            font-size: 12px;
+            text-align: center;
+        }
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+        footer p {
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
-    <header>
-        <!-- Adicionando a imagem do logo -->
-        <img src="images/logo.png" alt="Logo do Coffee Miner">
-        <h1>Bem-vindo ao Coffee Miner</h1>
-        <p>Explore o mundo dos grãos de café e ganhe recompensas!</p>
-    </header>
-
     <div class="sidebar">
-        <h2>Como jogar:</h2>
-        <p>1. Entre no nosso <a href="https://t.me/seubot" target="_blank">bot no Telegram</a> para começar.</p>
-        <p>2. Minere grãos de café e complete missões para ganhar recompensas!</p>
-        <p>3. Compartilhe suas conquistas nas redes sociais para ganhar mais prêmios!</p>
-    </div>
+        <!-- Logotipo -->
+        <div class="logo">
+            <img src="images/logo.png" alt="Logotipo do Coffee Miner">
+        </div>
 
-    <div class="content">
-        <h2>Seus Ganhos</h2>
-        <p>Total de ganhos: [Total de Ganhos]</p>
-        <button>Mintar NFT</button>
-        <button>Conectar Dispositivos</button>
+        <!-- Navegação -->
+        <div class="navigation">
+            <a href="#">QUEM SOMOS</a>
+            <a href="#">Perguntas Frequentes</a>
+        </div>
 
+        <!-- Formulário de Login -->
+        <div class="form">
+            <input type="text" placeholder="Login">
+            <input type="password" placeholder="Senha">
+            <div class="forgot-password">
+                <a href="#">Esqueceu a senha?</a>
+            </div>
+            <button>Entrar</button>
+            <div class="or">ou</div>
+            <button>Registro</button>
+        </div>
+
+        <!-- Rodapé -->
         <footer>
-            <p>&copy; 2025 Coffee Miner. Todos os direitos reservados.</p>
+            <p><a href="#">Política de Privacidade</a> | <a href="#">Termos e Condições</a></p>
+            <p><a href="#">Política de Cookies</a> | <a href="#">Configurações de Cookies</a></p>
+            <p>&copy; Fundação Grass, 2025. Todos os direitos reservados.</p>
         </footer>
     </div>
-
-    <!-- Botão de chat -->
-    <button class="chat-btn">Chat</button>
-
 </body>
 </html>
+
 
 
