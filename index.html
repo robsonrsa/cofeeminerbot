@@ -7,149 +7,93 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #6F4F1F; /* Cor de café */
+            color: #fff;
             margin: 0;
             padding: 0;
-            display: flex;
-            background-color: #3e2723; /* Cor escura de café */
-            color: #f5f5f5;
         }
-        /* Estilo da Barra Lateral (lado esquerdo) */
-        .sidebar {
-            background-color: #d4af37; /* Cor dourada */
-            color: white;
-            width: 600px; /* Largura do lado esquerdo ajustada para 600px */
+        header {
+            background-color: #FFD700; /* Cor dourada */
             padding: 20px;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .sidebar img {
-            max-width: 200px;
-        }
-        .sidebar h1 {
-            margin-top: 10px;
-        }
-        .sidebar a {
-            color: white;
-            text-decoration: none;
-        }
-        .sidebar form {
-            margin-top: 20px;
-        }
-        .sidebar label, .sidebar input, .sidebar button {
-            display: block;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-        .sidebar footer {
             text-align: center;
         }
-
-        /* Estilo do Conteúdo Principal (lado direito) */
-        .content {
-            flex-grow: 1;
+        header img {
+            max-width: 200px;
+        }
+        section {
+            margin: 20px;
+        }
+        a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #FFD700; /* Cor dourada */
+        }
+        .sidebar {
+            width: 600px; /* Largura aumentada para 600px */
+            height: 100vh; /* Mantém altura 100% da tela */
+            background-color: #3e8e41; /* Cor escura para o lado esquerdo */
             padding: 20px;
-            background-color: #f5f5f5;
-            margin-left: 600px; /* Ajustando o conteúdo para o lado direito ficar correto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-y: auto;
         }
-        .content section {
-            margin-bottom: 20px;
+        .content {
+            margin-left: 600px; /* Ajusta o conteúdo para começar depois do lado esquerdo */
+            padding: 20px;
+            background-color: #FFF8DC; /* Cor clara para o lado direito */
         }
-
-        /* Estilo do botão de chat */
-        .support-chat {
+        .chat-btn {
             position: fixed;
             bottom: 20px;
             right: 20px;
-        }
-        .support-chat button {
-            background-color: #d4af37; /* Cor dourada */
-            color: white;
-            padding: 10px 20px;
+            background-color: #FFD700; /* Cor dourada do botão */
+            color: #3e8e41; /* Cor escura para o texto */
             border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        /* Estilo do botão to top */
-        .to-top {
-            position: fixed;
-            bottom: 70px;
-            right: 20px;
-            background-color: #3e8e41; /* Cor verde para contraste */
-            color: white;
-            padding: 10px;
+            padding: 15px;
             border-radius: 50%;
             cursor: pointer;
+        }
+        .chat-btn:hover {
+            background-color: #6F4F1F; /* Cor de café no hover */
         }
     </style>
 </head>
 <body>
-    <!-- Barra Lateral (lado esquerdo) -->
-    <div class="sidebar">
+    <header>
+        <!-- Adicionando a imagem do logo -->
         <img src="images/logo.png" alt="Logo do Coffee Miner">
-        <h1>Coffee Miner</h1>
+        <h1>Bem-vindo ao Coffee Miner</h1>
         <p>Explore o mundo dos grãos de café e ganhe recompensas!</p>
+    </header>
 
-        <section>
-            <h2>Como jogar:</h2>
-            <p>1. Entre no nosso <a href="https://t.me/seubot" target="_blank">bot no Telegram</a> para começar.</p>
-            <p>2. Minere grãos de café e complete missões para ganhar recompensas!</p>
-            <p>3. Compartilhe suas conquistas nas redes sociais para ganhar mais prêmios!</p>
-        </section>
+    <div class="sidebar">
+        <h2>Como jogar:</h2>
+        <p>1. Entre no nosso <a href="https://t.me/seubot" target="_blank">bot no Telegram</a> para começar.</p>
+        <p>2. Minere grãos de café e complete missões para ganhar recompensas!</p>
+        <p>3. Compartilhe suas conquistas nas redes sociais para ganhar mais prêmios!</p>
+    </div>
 
-        <!-- Nova Seção -->
-        <section>
-            <h2>Logotipo da Grama™</h2>
-            <p><strong>QUEM SOMOS</strong></p>
-            <p><a href="#">Perguntas Frequentes</a></p>
-            <p><a href="#">Entrar</a></p>
-            <p>Ou</p>
-            <p><a href="#">Não tem uma conta? Registre-se</a></p>
-
-            <form action="#" method="post">
-                <label for="login">Login</label>
-                <input type="text" id="login" name="login" placeholder="Rbitcoin" required><br>
-
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha" placeholder="••••••••" required><br>
-
-                <a href="#">Esqueceu a senha?</a><br>
-                <button type="submit">Acessar minha conta</button>
-            </form>
-        </section>
+    <div class="content">
+        <h2>Seus Ganhos</h2>
+        <p>Total de ganhos: [Total de Ganhos]</p>
+        <button>Mintar NFT</button>
+        <button>Conectar Dispositivos</button>
 
         <footer>
-            <p><a href="#">Política de Privacidade</a> | <a href="#">Termos e Condições</a> | <a href="#">Política de Cookies</a></p>
-            <p>&copy; Fundação Grass, 2025. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Coffee Miner. Todos os direitos reservados.</p>
         </footer>
     </div>
 
-    <!-- Lado Direito (Conteúdo Principal) -->
-    <main class="content">
-        <section id="home">
-            <h2>Bem-vindo ao Coffee Miner</h2>
-            <p>Explore o mundo dos grãos de café e ganhe recompensas!</p>
-        </section>
+    <!-- Botão de chat -->
+    <button class="chat-btn">Chat</button>
 
-        <section id="como-jogar">
-            <h2>Como jogar:</h2>
-            <p>1. Entre no nosso <a href="https://t.me/seubot" target="_blank">bot no Telegram</a> para começar.</p>
-            <p>2. Minere grãos de café e complete missões para ganhar recompensas!</p>
-            <p>3. Compartilhe suas conquistas nas redes sociais para ganhar mais prêmios!</p>
-        </section>
-    </main>
-
-    <!-- Botão de Chat -->
-    <div class="support-chat">
-        <button>Chat de Suporte</button>
-    </div>
-
-    <!-- Botão To Top -->
-    <div class="to-top">
-        ↑
-    </div>
 </body>
 </html>
 
