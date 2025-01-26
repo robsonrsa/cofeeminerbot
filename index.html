@@ -5,158 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Miner</title>
     <style>
-        /* Resetando margens e padding */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        /* Corpo da página */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            min-height: 100vh;
+            background-color: #c3a38d; /* Fundo mais claro de café */
+        }
+        .sidebar {
+            background-color: #3e2723; /* Marrom escuro (café forte) */
+            color: white;
+            width: 250px;
             height: 100vh;
-        }
-
-        /* Container principal do login */
-        .login-container {
-            display: flex;
-            width: 800px;
-            height: 500px;
-            border-radius: 10px;
-            overflow: hidden;
-            background-color: #ffffff;
-        }
-
-        /* Lado esquerdo (formulário de login) */
-        .login-left {
-            background-color: #ffffff;
-            padding: 30px;
-            width: 40%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .login-left h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .login-left form {
+            padding: 20px;
             display: flex;
             flex-direction: column;
         }
-
-        .login-left label {
-            margin-bottom: 5px;
-            font-weight: bold;
+        .content {
+            background-color: #f1e1c6; /* Tom claro de café (bege suave) */
+            flex: 1;
+            padding: 20px;
+            min-height: 100vh;
         }
-
-        .login-left input {
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .login-left button {
-            padding: 12px;
-            background-color: #3e8e41; /* Cor do tema */
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        .login-left button:hover {
-            background-color: #357a38; /* Cor de hover */
-        }
-
-        /* Lado direito (imagem do site) */
-        .login-right {
-            width: 60%;
-            background-color: #3e8e41; /* Cor do tema */
-        }
-
-        .login-right img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Estilos do header e footer do site */
         header {
-            background-color: #3e8e41;
+            background-color: #5d4037; /* Marrom médio (café) */
             padding: 20px;
             text-align: center;
             color: white;
         }
-
+        h1 {
+            margin: 0;
+        }
+        section {
+            margin: 20px 0;
+        }
+        a {
+            color: #6d4c41; /* Tom de marrom claro para links */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
         footer {
             text-align: center;
             margin-top: 20px;
             padding: 10px;
-            background-color: #3e8e41;
+            background-color: #3e2723; /* Marrom escuro (café forte) */
             color: white;
         }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
 
-    <!-- Container principal -->
-    <div class="login-container">
-
-        <!-- Lado esquerdo: formulário de login -->
-        <div class="login-left">
-            <h2>Login Coffeeswap</h2>
-            <form id="login-form">
-                <label for="username">Usuário</label>
-                <input type="text" id="username" name="username" required>
-
-                <label for="password">Senha</label>
-                <input type="password" id="password" name="password" required>
-
-                <button type="submit">Entrar</button>
-            </form>
-        </div>
-
-        <!-- Lado direito: imagem -->
-        <div class="login-right">
-            <img src="images/logo.png" alt="Logo do Coffee Miner"> <!-- Substitua pelo seu logo -->
-        </div>
+    <!-- Barra Lateral -->
+    <div class="sidebar">
+        <img src="images/logo.png" alt="Logo do Coffee Miner" style="max-width: 200px;">
+        <h1>Coffee Miner</h1>
+        <p>Explore o mundo dos grãos de café e ganhe recompensas!</p>
+        <section>
+            <h2>Como jogar:</h2>
+            <p>1. Entre no nosso <a href="https://t.me/seubot" target="_blank">bot no Telegram</a> para começar.</p>
+            <p>2. Minere grãos de café e complete missões para ganhar recompensas!</p>
+            <p>3. Compartilhe suas conquistas nas redes sociais para ganhar mais prêmios!</p>
+        </section>
     </div>
 
-    <!-- Script de login -->
-    <script>
-        document.querySelector('#login-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Impede o envio do formulário
+    <!-- Conteúdo Principal -->
+    <div class="content">
+        <header>
+            <h1>Bem-vindo ao Coffee Miner</h1>
+            <p>Explore o mundo dos grãos de café e ganhe recompensas!</p>
+        </header>
 
-            // Aqui você pode adicionar a lógica para validar o login
+        <section>
+            <h2>Como jogar:</h2>
+            <p>1. Entre no nosso <a href="https://t.me/seubot" target="_blank">bot no Telegram</a> para começar.</p>
+            <p>2. Minere grãos de café e complete missões para ganhar recompensas!</p>
+            <p>3. Compartilhe suas conquistas nas redes sociais para ganhar mais prêmios!</p>
+        </section>
 
-            // Redireciona o usuário após login bem-sucedido
-            window.location.href = "pagina-principal.html"; // Substitua para o link correto
-        });
-    </script>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Coffee Miner. Todos os direitos reservados. <a href="#">Política de Privacidade</a></p>
-    </footer>
+        <footer>
+            <p>&copy; 2025 Coffee Miner. Todos os direitos reservados. <a href="#">Política de Privacidade</a></p>
+        </footer>
+    </div>
 
 </body>
 </html>
+
 
