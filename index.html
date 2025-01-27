@@ -12,6 +12,11 @@
             box-sizing: border-box;
         }
 
+        body, html {
+            height: 100%; /* Garantir que o corpo e a tela ocupem toda a altura */
+            margin: 0; /* Remove margens do body */
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4; /* Cor de fundo do site */
@@ -21,7 +26,8 @@
         .container {
             display: flex;
             justify-content: flex-start;
-            padding: 20px;
+            padding: 0; /* Remove o padding da parte externa */
+            height: 100%; /* Garante que o contêiner ocupe toda a altura da tela */
         }
 
         /* Lado Esquerdo */
@@ -65,7 +71,7 @@
             display: flex;
             justify-content: flex-end; /* Botão de chat alinhado à direita */
             align-items: flex-end; /* Botão de chat na parte inferior */
-            height: 100vh; /* Altura para o conteúdo ocupar toda a tela */
+            height: 100%; /* Garante que o lado direito ocupe toda a altura da tela */
         }
 
         /* Botão de chat */
