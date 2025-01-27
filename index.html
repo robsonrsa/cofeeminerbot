@@ -34,14 +34,17 @@
         .content-left {
             width: 420px; /* Lado esquerdo com 420px */
             background-color: #3E1F1B; /* Cor escura para o lado esquerdo */
-            color: #fff; /* Texto branco para contraste */
+            color: #4C2A1F; /* Marrom escuro para as letras */
             padding: 20px;
             display: flex;
             flex-direction: column;
+            justify-content: space-between; /* Organiza os elementos de forma espaçada */
+            height: 100%; /* Ocupa toda a altura */
         }
 
         .logo {
-            margin-bottom: 20px;
+            margin-bottom: 30px; /* Espaço para o logo */
+            text-align: center;
         }
 
         .logo-image {
@@ -54,13 +57,19 @@
         }
 
         ul li {
-            margin: 10px 0;
+            margin: 15px 0; /* Aumenta o espaçamento entre os itens */
         }
 
         ul li a {
             text-decoration: none;
-            color: #fff; /* Texto branco */
+            color: #4C2A1F; /* Marrom escuro */
             font-weight: bold;
+            font-size: 16px;
+            display: block; /* Faz os links ocuparem a largura total */
+        }
+
+        ul li a:hover {
+            color: #D86B16; /* Efeito de hover em laranja escuro */
         }
 
         /* Lado Direito */
@@ -96,7 +105,7 @@
         /* Links do rodapé */
         .footer-links a {
             text-decoration: none;
-            color: #fff;
+            color: #4C2A1F; /* Marrom escuro */
             margin-right: 10px;
         }
 
@@ -116,7 +125,19 @@
             <ul>
                 <li><a href="#">QUEM SOMOS</a></li>
                 <li><a href="#">Perguntas Frequentes</a></li>
+                <li><a href="#">Entrar</a></li>
+                <li><a href="#">Não tem uma conta? Registro</a></li>
+                <li><a href="#">Esqueceu a senha?</a></li>
             </ul>
+            <div class="footer">
+                <p>&copy; Fundação Coffeeswap, 2025. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos e Condições</a>
+                    <a href="#">Política de Cookies</a>
+                    <a href="#">Configurações de Cookies</a>
+                </div>
+            </div>
         </div>
 
         <!-- Lado Direito -->
