@@ -1,3 +1,15 @@
+/* Reset básico para garantir que o estilo seja consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Cor de fundo do site */
+}
+
 /* Contêiner principal */
 .container {
     display: flex;
@@ -7,13 +19,14 @@
 
 /* Lado Esquerdo */
 .content-left {
-    flex: 1;
-    background-color: transparent; /* Mantém o fundo original */
-    padding-right: 20px;
+    width: 400px; /* Lado esquerdo com 400px */
+    background-color: #D86B16; /* Laranja escuro */
+    color: #4C2A1F; /* Marrom escuro para as letras */
+    padding: 20px;
 }
 
 .logo {
-    width: 100px; /* Ajuste conforme o tamanho do logo */
+    width: 150px; /* Ajuste conforme o tamanho do logo */
 }
 
 ul {
@@ -27,18 +40,26 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    color: #000; /* Ajuste conforme necessário */
+    color: #4C2A1F; /* Marrom escuro */
+    font-weight: bold;
 }
 
 /* Lado Direito */
 .content-right {
-    flex: 2;
-    background-color: transparent; /* Mantém o fundo original */
-    padding-left: 20px;
+    flex: 1;
+    background-color: #3E1F1B; /* Cor café escura */
+    padding: 20px;
+    color: #fff;
 }
 
+/* Seção de login */
 .login-section, .register-section {
     margin-bottom: 20px;
+}
+
+.login-section h2 {
+    margin-bottom: 10px;
+    color: #fff;
 }
 
 .login-form input {
@@ -64,19 +85,37 @@ button:hover {
 
 .forgot-password a {
     text-decoration: none;
-    color: #007bff;
+    color: #fff;
 }
 
+/* Links do rodapé */
 .footer-links a {
     text-decoration: none;
-    color: #007bff;
+    color: #fff;
     margin-right: 10px;
 }
 
 .footer {
     margin-top: 20px;
     font-size: 12px;
-    color: #6c757d;
+}
+
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.chat-button button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.chat-button button:hover {
+    background-color: #0056b3;
 }
 
 
