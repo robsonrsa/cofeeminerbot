@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffeeswap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Coffeeswap: Plataforma de Criptomoeda Baseada em Café</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#plataforma">Plataforma de Criptomoeda</a></li>
+            <li><a href="#nfts">NFTs Temáticos de Café</a></li>
+            <li><a href="#recompensas">Recompensas e Engajamento</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>Bem-vindo ao Coffeeswap</h2>
+            <p>Coffeeswap é uma plataforma de criptomoeda inspirada na ideia de um mercado descentralizado, com um toque único: o design é inspirado em grãos de café.</p>
+        </section>
+        <section id="plataforma">
+            <h2>Plataforma de Criptomoeda</h2>
+            <p>Coffeeswap é uma plataforma de troca de criptomoedas, funcionando de maneira semelhante a outras plataformas descentralizadas, mas com uma identidade visual única centrada no tema do café.</p>
+        </section>
+        <section id="nfts">
+            <h2>NFTs Temáticos de Café</h2>
+            <p>Serão criados 50 NFTs baseados no tema de grãos de café, com um design 3D diferenciado. Os NFTs podem ser usados dentro do ecossistema Coffeeswap, oferecendo aos usuários uma maneira de colecionar itens exclusivos e interagir com a plataforma de forma única.</p>
+        </section>
+        <section id="recompensas">
+            <h2>Recompensas e Engajamento</h2>
+            <p>Os jogadores e usuários da plataforma serão incentivados a completar missões e interagir com as redes sociais para ganhar recompensas, incluindo criptomoedas e NFTs.</p>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Para mais informações, entre em contato conosco através das redes sociais.</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html> 
