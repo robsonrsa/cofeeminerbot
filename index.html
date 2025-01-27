@@ -13,42 +13,41 @@
         }
 
         body, html {
-            height: 100%; /* Garantir que o corpo e a tela ocupem toda a altura */
-            margin: 0; /* Remove margens do body */
+            height: 100%;
+            margin: 0;
         }
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4; /* Cor de fundo do site */
+            background-color: #f4f4f4;
         }
 
         /* Contêiner principal */
         .container {
             display: flex;
             justify-content: flex-start;
-            padding: 0; /* Remove o padding da parte externa */
-            height: 100%; /* Garante que o contêiner ocupe toda a altura da tela */
+            height: 100%;
         }
 
         /* Lado Esquerdo */
         .content-left {
             width: 420px; /* Lado esquerdo com 420px */
-            background-color: #D86B16; /* Cor laranja escuro para o lado esquerdo */
+            background-color: #D86B16; /* Laranja escuro */
             color: #4C2A1F; /* Marrom escuro para as letras */
             padding: 20px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Organiza os elementos de forma espaçada */
-            height: 100%; /* Ocupa toda a altura */
+            justify-content: space-between;
+            height: 100%;
         }
 
         .logo {
-            margin-bottom: 30px; /* Espaço para o logo */
+            margin-bottom: 30px;
             text-align: center;
         }
 
         .logo-image {
-            width: 150px; /* Ajuste conforme o tamanho do logo */
+            width: 150px;
         }
 
         ul {
@@ -57,33 +56,66 @@
         }
 
         ul li {
-            margin: 15px 0; /* Aumenta o espaçamento entre os itens */
+            margin: 15px 0;
         }
 
         ul li a {
             text-decoration: none;
-            color: #4C2A1F; /* Marrom escuro */
+            color: #4C2A1F;
             font-weight: bold;
             font-size: 16px;
-            display: block; /* Faz os links ocuparem a largura total */
+            display: block;
         }
 
         ul li a:hover {
-            color: #3E1F1B; /* Efeito de hover em cor de café escuro */
+            color: #3E1F1B;
         }
 
-        /* Lado Direito */
-        .content-right {
-            flex-grow: 1; /* Lado direito ocupa o espaço restante */
-            background-color: #3E1F1B; /* Cor de fundo escura de café */
-            padding: 20px;
-            display: flex;
-            justify-content: flex-end; /* Botão de chat alinhado à direita */
-            align-items: flex-end; /* Botão de chat na parte inferior */
-            height: 100%; /* Garante que o lado direito ocupe toda a altura da tela */
+        /* Formulário de Login */
+        .login-form {
+            margin-top: 30px;
         }
 
-        /* Botão de chat */
+        .login-form input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .login-form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .login-form button:hover {
+            background-color: #218838;
+        }
+
+        .forgot-password a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Links do rodapé */
+        .footer-links a {
+            text-decoration: none;
+            color: #4C2A1F;
+            margin-right: 10px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+        }
+
         .chat-button {
             position: fixed;
             bottom: 20px;
@@ -101,18 +133,6 @@
         .chat-button button:hover {
             background-color: #0056b3;
         }
-
-        /* Links do rodapé */
-        .footer-links a {
-            text-decoration: none;
-            color: #4C2A1F; /* Marrom escuro */
-            margin-right: 10px;
-        }
-
-        .footer {
-            margin-top: 20px;
-            font-size: 12px;
-        }
     </style>
 </head>
 <body>
@@ -125,10 +145,21 @@
             <ul>
                 <li><a href="#">QUEM SOMOS</a></li>
                 <li><a href="#">Perguntas Frequentes</a></li>
-                <li><a href="#">Entrar</a></li>
-                <li><a href="#">Não tem uma conta? Registro</a></li>
-                <li><a href="#">Esqueceu a senha?</a></li>
             </ul>
+
+            <div class="login-form">
+                <input type="text" id="login" placeholder="Login (ex: Rbitcoin)">
+                <input type="password" id="senha" placeholder="Senha">
+                <button type="button">Entrar</button>
+                <div class="forgot-password">
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+            </div>
+
+            <ul>
+                <li><a href="#">Não tem uma conta? Registro</a></li>
+            </ul>
+
             <div class="footer">
                 <p>&copy; Fundação Coffeeswap, 2025. Todos os direitos reservados.</p>
                 <div class="footer-links">
