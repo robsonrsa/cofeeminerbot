@@ -141,6 +141,23 @@
             padding: 20px;
             color: #fff;
         }
+
+        /* Animação de zoom para a imagem */
+        @keyframes zoomImagem {
+          0% {
+            transform: scale(0.5); /* Começa pequena */
+          }
+          100% {
+            transform: scale(1); /* Cresce até o tamanho normal */
+          }
+        }
+
+        /* Estilo da imagem animada */
+        .imagem-animada {
+          max-width: 100%;
+          height: auto;
+          animation: zoomImagem 1.5s ease-out; /* Define a animação de 1.5 segundos */
+        }
     </style>
 </head>
 <body>
@@ -181,6 +198,7 @@
 
         <!-- Lado Direito -->
         <div class="content-right">
+            <img src="caminho/da/imagem.jpg" alt="Imagem de café" class="imagem-animada">
             <div class="chat-button">
                 <button>Chat</button>
             </div>
