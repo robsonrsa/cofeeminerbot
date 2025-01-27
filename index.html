@@ -26,9 +26,9 @@
 
         /* Lado Esquerdo */
         .content-left {
-            width: 400px; /* Lado esquerdo com 400px */
-            background-color: #D86B16; /* Laranja escuro */
-            color: #4C2A1F; /* Marrom escuro para as letras */
+            width: 420px; /* Lado esquerdo com 420px */
+            background-color: #3E1F1B; /* Cor escura para o lado esquerdo */
+            color: #fff; /* Texto branco para contraste */
             padding: 20px;
         }
 
@@ -51,66 +51,22 @@
 
         ul li a {
             text-decoration: none;
-            color: #4C2A1F; /* Marrom escuro */
+            color: #fff; /* Texto branco */
             font-weight: bold;
         }
 
         /* Lado Direito */
         .content-right {
             flex-grow: 1; /* Lado direito ocupa o espaço restante */
-            background-color: #3E1F1B; /* Cor café escura */
+            background-color: #D86B16; /* Cor de fundo laranja escuro */
             padding: 20px;
-            color: #fff;
+            color: #4C2A1F; /* Texto marrom escuro */
+            display: flex;
+            justify-content: flex-end; /* Botão de chat alinhado à direita */
+            align-items: flex-end; /* Botão de chat na parte inferior */
         }
 
-        /* Seção de login */
-        .login-section, .register-section {
-            margin-bottom: 20px;
-        }
-
-        .login-section h2 {
-            margin-bottom: 10px;
-            color: #fff;
-        }
-
-        .login-form input {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-        }
-
-        button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #218838;
-        }
-
-        .forgot-password a {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        /* Links do rodapé */
-        .footer-links a {
-            text-decoration: none;
-            color: #fff;
-            margin-right: 10px;
-        }
-
-        .footer {
-            margin-top: 20px;
-            font-size: 12px;
-        }
-
+        /* Botão de chat */
         .chat-button {
             position: fixed;
             bottom: 20px;
@@ -127,6 +83,18 @@
 
         .chat-button button:hover {
             background-color: #0056b3;
+        }
+
+        /* Links do rodapé */
+        .footer-links a {
+            text-decoration: none;
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
         }
     </style>
 </head>
@@ -145,34 +113,6 @@
 
         <!-- Lado Direito -->
         <div class="content-right">
-            <div class="login-section">
-                <h2>Entrar</h2>
-                <div class="login-form">
-                    <input type="text" placeholder="Nome de Usuário" value="Rbitcoin">
-                    <input type="password" placeholder="Senha">
-                    <button>Entrar</button>
-                </div>
-                <div class="forgot-password">
-                    <a href="#">Esqueceu a senha?</a>
-                </div>
-            </div>
-
-            <div class="register-section">
-                <p>Não tem uma conta?</p>
-                <a href="#">Registro</a>
-            </div>
-
-            <div class="footer-links">
-                <a href="#">Política de Privacidade</a> | 
-                <a href="#">Termos e Condições</a> | 
-                <a href="#">Política de Cookies</a> | 
-                <a href="#">Configurações de Cookies</a>
-            </div>
-
-            <div class="footer">
-                <p>&copy; Fundação Coffeeswap, 2025. Todos os direitos reservados.</p>
-            </div>
-
             <div class="chat-button">
                 <button>Chat</button>
             </div>
@@ -180,7 +120,6 @@
     </div>
 </body>
 </html>
-
 
 
 
