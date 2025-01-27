@@ -1,93 +1,43 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Miner</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #6F4F1F; /* Cor de café */
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        .sidebar {
-            width: 400px; /* Largura ajustada para 400px */
-            height: 100vh; /* Altura total da tela */
-            background-color: #FFD700; /* Cor dourada para o lado esquerdo */
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .content {
-            flex: 1; /* Ocupar o restante do espaço */
-            background-color: #6F4F1F; /* Cor de café para o lado direito */
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end; /* Alinha o botão de chat ao final */
-            align-items: flex-end;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .chat-btn {
-            position: relative; /* Removendo fixed para alinhamento correto */
-            background-color: #FFD700; /* Cor dourada do botão */
-            color: #3e8e41; /* Cor escura para o texto */
-            border: none;
-            padding: 15px;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-        .chat-btn:hover {
-            background-color: #3e8e41; /* Cor escura no hover */
-        }
-        h2 {
-            margin-top: 0;
-        }
-        a {
-            color: #6F4F1F;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            color: #3e8e41;
-        }
-    </style>
-</head>
-<body>
-    <div class="sidebar">
-        <img src="images/logo.png" alt="Logotipo do Coffee Miner" style="max-width: 150px; margin-bottom: 20px;">
-        <h2>QUEM SOMOS</h2>
-        <p><a href="#">Perguntas Freqüentes</a></p>
-        <h3>Entrar</h3>
-        <button style="background-color: #fff; color: #3e8e41; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Google</button>
-        <p>ou</p>
-        <form>
-            <label for="username">Usuário</label><br>
-            <input type="text" id="username" name="username" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: none;">
-            <label for="password">Senha</label><br>
-            <input type="password" id="password" name="password" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: none;">
-            <p><a href="#">Esqueceu a senha?</a></p>
-            <button type="submit" style="background-color: #FFD700; color: #3e8e41; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Acessar minha conta</button>
-        </form>
-        <footer>
-            <p><a href="#">Política de Privacidade</a> | <a href="#">Termos e Condições</a> | <a href="#">Política de Cookies</a> | <a href="#">Configurações de Cookies</a></p>
-            <p>&copy; Fundação Grass, 2025. Todos os direitos reservados.</p>
-        </footer>
+<div class="container">
+    <div class="content-left">
+        <img src="logo.png" alt="Logo CoffeeSwap" class="logo">
+        <ul>
+            <li><a href="#">QUEM SOMOS</a></li>
+            <li><a href="#">Perguntas Frequentes</a></li>
+        </ul>
     </div>
 
-    <div class="content">
-        <!-- Apenas espaço vazio para o lado direito -->
-        <button class="chat-btn">Chat</button>
+    <div class="content-right">
+        <div class="login-section">
+            <h2>Entrar</h2>
+            <div class="login-form">
+                <input type="text" placeholder="Nome de Usuário" value="Rbitcoin">
+                <input type="password" placeholder="Senha">
+                <button>Entrar</button>
+            </div>
+            <div class="forgot-password">
+                <a href="#">Esqueceu a senha?</a>
+            </div>
+        </div>
+
+        <div class="register-section">
+            <p>Não tem uma conta?</p>
+            <a href="#">Registro</a>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">Política de Privacidade</a> | 
+            <a href="#">Termos e Condições</a> | 
+            <a href="#">Política de Cookies</a> | 
+            <a href="#">Configurações de Cookies</a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; Fundação Coffeeswap, 2025. Todos os direitos reservados.</p>
+        </div>
     </div>
-</body>
-</html>
+</div>
+
 
 
 
