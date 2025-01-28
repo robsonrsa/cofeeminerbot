@@ -1,0 +1,10 @@
+
+cofeeminerbot/
+├── css/
+│   └── style.css        # Arquivo de estilos da página
+├── images/
+│   └── fundo da pagina.webp   # Imagem de fundo
+├── .gitignore           # Arquivo para ignorar itens no Git
+├── LICENSE              # Licença do projeto
+├── README.md            # Documentação do projeto
+└── index.html           # Arquivo principal da página

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeSwap - Login</title>
+    <style>
+        /* Reset básico para garantir que o estilo seja consistente */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Contêiner principal */
+        .container {
+            display: flex;
+            justify-content: flex-start;
+            height: 100%;
+        }
+
+        /* Lado Esquerdo */
+        .content-left {
+            width: 420px; /* Lado esquerdo com 420px */
+            background-color: #D86B16; /* Laranja escuro */
+            color: #4C2A1F; /* Marrom escuro para as letras */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .logo {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .logo-image {
+            width: 150px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 15px 0;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #4C2A1F;
+            font-weight: bold;
+            font-size: 16px;
+            display: block;
+        }
+
+        ul li a:hover {
+            color: #3E1F1B;
+        }
+
+        /* Formulário de Login */
+        .login-form {
+            margin-top: 30px;
+        }
+
+        .login-form input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .login-form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .login-form button:hover {
+            background-color: #218838;
+        }
+
+        .forgot-password a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Links do rodapé */
+        .footer-links a {
+            text-decoration: none;
+            color: #4C2A1F;
+            margin-right: 10px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+        }
+
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .chat-button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .chat-button button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Lado Direito */
+        .content-right {
+            flex: 1;
+            background-color: #3E1F1B; /* Cor café escura */
+            padding: 20px;
+            color: #fff;
+        }
+
+        /* Animação de zoom para a imagem */
+        @keyframes zoomImagem {
+          0% {
+            transform: scale(0.5); /* Começa pequena */
+          }
+          100% {
+            transform: scale(1); /* Cresce até o tamanho normal */
+          }
+        }
+
+        /* Estilo da imagem animada */
+        .imagem-animada {
+          max-width: 100%;
+          height: auto;
+          animation: zoomImagem 1.5s ease-out; /* Define a animação de 1.5 segundos */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Lado Esquerdo -->
+        <div class="content-left">
+            <div class="logo">
+                <img src="logo.png" alt="Logo CoffeeSwap" class="logo-image">
+            </div>
+            <ul>
+                <li><a href="#">QUEM SOMOS</a></li>
+                <li><a href="#">Perguntas Frequentes</a></li>
+            </ul>
+
+            <div class="login-form">
+                <input type="text" id="login" placeholder="Login (ex: Rbitcoin)">
+                <input type="password" id="senha" placeholder="Senha">
+                <!-- Redirecionamento para o dashboard após login -->
+                <button type="button" onclick="window.location.href='dashboard.html'">Entrar</button>
+                <div class="forgot-password">
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+            </div>
+
+            <ul>
+                <li><a href="#">Não tem uma conta? Registro</a></li>
+            </ul>
+
+            <div class="footer">
+                <p>&copy; Fundação Coffeeswap, 2025. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos e Condições</a>
+                    <a href="#">Política de Cookies</a>
+                    <a href="#">Configurações de Cookies</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lado Direito -->
+        <div class="content-right">
+            <img src="caminho/da/imagem.jpg" alt="Imagem de café" class="imagem-animada">
+            <div class="chat-button">
+                <button>Chat</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
