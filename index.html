@@ -158,6 +158,77 @@
           height: auto;
           animation: zoomImagem 1.5s ease-out; /* Define a animação de 1.5 segundos */
         }
+        
+        /* Chatbot */
+        .floating-chatbot {
+            position: fixed;
+            bottom: 6rem;
+            right: 1rem;
+            width: 300px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+            padding: 1rem;
+            z-index: 1000;
+        }
+
+        .floating-chatbot.active {
+            display: flex;
+        }
+
+        .chat-header {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .chat-messages {
+            overflow-y: auto;
+            max-height: 200px;
+            margin-bottom: 1rem;
+        }
+
+        .chat-messages div {
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            border-radius: 8px;
+        }
+
+        .chat-messages .bot {
+            background-color: #f1f1f1;
+            text-align: left;
+        }
+
+        .chat-messages .user {
+            background-color: #007bff;
+            color: white;
+            text-align: right;
+        }
+
+        .chat-input {
+            display: flex;
+            margin-top: 1rem;
+        }
+
+        .chat-input input {
+            flex-grow: 1;
+            padding: 0.5rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .chat-input button {
+            padding: 0.5rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            margin-left: 0.5rem;
+        }
+
     </style>
 </head>
 <body>
@@ -175,8 +246,8 @@
             <div class="login-form">
                 <input type="text" id="login" placeholder="Login (ex: Rbitcoin)">
                 <input type="password" id="senha" placeholder="Senha">
-                <!-- Redirecionamento para o dashboard após login -->
-                <button type="button" onclick="window.location.href='dashboard.html'">Entrar</button>
+                <!-- Botão de Login sem redirecionamento -->
+                <button type="button">Entrar</button>
                 <div class="forgot-password">
                     <a href="#">Esqueceu a senha?</a>
                 </div>
@@ -186,25 +257,6 @@
                 <li><a href="#">Não tem uma conta? Registro</a></li>
             </ul>
 
-            <div class="footer">
-                <p>&copy; Fundação Coffeeswap, 2025. Todos os direitos reservados.</p>
-                <div class="footer-links">
-                    <a href="#">Política de Privacidade</a>
-                    <a href="#">Termos e Condições</a>
-                    <a href="#">Política de Cookies</a>
-                    <a href="#">Configurações de Cookies</a>
-                </div>
-            </div>
-        </div>
+          
 
-        <!-- Lado Direito -->
-        <div class="content-right">
-            <!-- Caminho da imagem atualizado, certifique-se de que a imagem está na pasta correta -->
-            <img src="images/imagem.jpg" alt="Imagem de café" class="imagem-animada">
-            <div class="chat-button">
-                <button>Chat</button>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+            
