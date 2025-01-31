@@ -116,24 +116,6 @@
             font-size: 12px;
         }
 
-        .chat-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-        }
-
-        .chat-button button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        .chat-button button:hover {
-            background-color: #0056b3;
-        }
-
         /* Lado Direito */
         .content-right {
             flex: 1;
@@ -142,24 +124,7 @@
             color: #fff;
         }
 
-        /* Animação de zoom para a imagem */
-        @keyframes zoomImagem {
-          0% {
-            transform: scale(0.5); /* Começa pequena */
-          }
-          100% {
-            transform: scale(1); /* Cresce até o tamanho normal */
-          }
-        }
-
-        /* Estilo da imagem animada */
-        .imagem-animada {
-          max-width: 100%;
-          height: auto;
-          animation: zoomImagem 1.5s ease-out; /* Define a animação de 1.5 segundos */
-        }
-        
-        /* Chatbot */
+        /* Estilo do chatbot */
         .floating-chatbot {
             position: fixed;
             bottom: 6rem;
@@ -169,14 +134,14 @@
             border: 1px solid #ddd;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            display: none;
+            display: none; /* Começa invisível */
             flex-direction: column;
             padding: 1rem;
             z-index: 1000;
         }
 
         .floating-chatbot.active {
-            display: flex;
+            display: flex; /* Quando a classe "active" é adicionada, o chatbot aparece */
         }
 
         .chat-header {
@@ -229,6 +194,24 @@
             margin-left: 0.5rem;
         }
 
+        /* Botão para ativar o chatbot */
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .chat-button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .chat-button button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -246,7 +229,6 @@
             <div class="login-form">
                 <input type="text" id="login" placeholder="Login (ex: Rbitcoin)">
                 <input type="password" id="senha" placeholder="Senha">
-                <!-- Botão de Login sem redirecionamento -->
                 <button type="button">Entrar</button>
                 <div class="forgot-password">
                     <a href="#">Esqueceu a senha?</a>
@@ -256,7 +238,40 @@
             <ul>
                 <li><a href="#">Não tem uma conta? Registro</a></li>
             </ul>
+        </div>
 
-          
+        <!-- Lado Direito -->
+        <div class="content-right">
+            <!-- O conteúdo à direita pode ser uma imagem, por exemplo -->
+            <img src="coffee-image.jpg" alt="Imagem de café" class="imagem-animada">
+        </div>
+    </div>
 
-            
+    <!-- Botão para ativar o chatbot -->
+    <div class="chat-button">
+        <button>Iniciar Chat</button>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="floating-chatbot">
+        <div class="chat-header">Chatbot</div>
+        <div class="chat-messages">
+            <!-- Mensagens do chatbot -->
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Digite uma mensagem">
+            <button>Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        // Função para mostrar o chatbot
+        function showChatbot() {
+            document.querySelector('.floating-chatbot').classList.add('active');
+        }
+
+        // Adiciona o evento de clique para ativar o chatbot
+        document.querySelector('.chat-button button').addEventListener('click', showChatbot);
+    </script>
+</body>
+</html>
